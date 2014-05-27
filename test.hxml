@@ -1,0 +1,4 @@
+-main test.Test
+-cp test
+-cp src
+--interp
