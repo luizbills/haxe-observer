@@ -1,8 +1,9 @@
 {
   "name": "observer",
   "version": "0.0.1",
-  "url": "https://github.com/luizbills/haxe-observer",
   "description": "A cross-platform implementation of observer pattern to Haxe",
+  "releasenote": "intial release",
+  "url": "https://github.com/luizbills/haxe-observer",
   "license": "MIT",
   "contributors": [
     "luizbills"
