@@ -2,17 +2,12 @@ package test;
 
 import observer.*;
 
-class Test extends Observable {
+private class TestObservable extends Observable {
 
-  static function main() {
-    var obs:Test = new Test();
-
-    obs.addObserver(new TestObserver('hello'));
-    obs.addObserver(new TestObserver('world'));
-    obs.setChanged();
-    obs.notifyObservers('an observer says:');
+  public function new() {
+    super();
+    setChanged();
   }
-
 }
 
 private class TestObserver implements Observer {
@@ -26,5 +21,16 @@ private class TestObserver implements Observer {
   public function update(observable:Observable, data:Dynamic) {
     trace('$data $msg');
   }
+}
 
+class Test  {
+
+  static function main() {
+    var obs:TestObservable = new TestObservable();
+
+    obs.addObserver(new TestObserver('hello'));
+    obs.addObserver(new TestObserver('world'));
+
+    obs.notifyObservers('an observer says:');
+  }
 }
